@@ -38,7 +38,7 @@
 */
 
 $autoload['packages'] = array();
-
+$config['composer_autoload'] = TRUE;
 
 /*
 | -------------------------------------------------------------------

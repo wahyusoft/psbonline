@@ -121,6 +121,11 @@ class Users_model extends CI_model{
 
     }
 
+    public function pendaftarID($ID){
+        $result = $this->db->get_where('pendaftaran',array('pendaftarId'=>$ID));        
+        return $result->row();
+    }
+
     
 
   }
