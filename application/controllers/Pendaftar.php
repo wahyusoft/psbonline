@@ -7,9 +7,7 @@ class Pendaftar extends CI_Controller {
     
     public function __construct() {
         parent::__construct();                  
-        $this->crud = new grocery_CRUD();
-     
-        $this->crud->unset_back_to_list();
+        $this->crud = new grocery_CRUD();        
         $this->crud->set_theme('datatables');
         $this->module = 'pendaftaran';                            
     }
