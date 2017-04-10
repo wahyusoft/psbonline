@@ -186,7 +186,7 @@
                 <div class="col-xs-6">
                   <label>Jumlah Saudara Tiri</label>
                    <select class="form-control" id="jumsdrtiri" name="jumsdrtiri">
-                    <?php for($b=1;$b<=20;$b++){
+                    <?php for($b=0;$b<=20;$b++){
                         echo "<option value='$b'>$b</option>";
                       }     
                     ?> 
@@ -517,7 +517,7 @@
                     <label>Lulus Tahun</label>
                     <select name="thnlulus" id="thnlulus" class="form-control">
                     <?php 
-                      for($tm=date('Y')-2;$tm>2010;$tm--){
+                      for($tm=date('Y');$tm>2010;$tm--){
                         echo "<option value='$tm'>$tm</option>";
                       }
                     ?>
@@ -556,8 +556,11 @@
         <!-- /.box-body -->
         <div class="box-footer">
            <div class="col-xs-2">
-              <input type="submit" name="btnSubmit" class="btn btn-block btn-primary btn-lg" value="Daftar">
-           </div>  
+              <input type="submit" name="btnSubmit" class="btn btn-block btn-primary btn-lg" value="Daftar">               
+           </div> 
+           <div class="col-xs-2">
+             <div id="downloadform"></div>
+           </div> 
         </div>
         <div id="response"></div>
       </div>
@@ -593,11 +596,11 @@
                 <tr><td colspan="5" align="center">Belum ada data pendaftar yang tersimpan dalam sistem.</td></tr>
                 <?php } else{ 
                  foreach ($pendaftar->result() as $row) {
-                    echo "<th>$row->pendaftarId</th>
+                    echo "<tr><th>$row->pendaftarId</th>
                           <th>$row->nama</th>
                           <th>$row->asalsekolah</th>
                           <th>$row->tglpost</th>
-                          <th>$row->skor</th>";  
+                          <th>$row->skor</th></tr>";  
                   }
                 }   
                 ?>
@@ -648,11 +651,13 @@
         $('#prestasi').hide(); 
         $('#umum').show(); 
         $('#jalur').val('umum');
+        $("#downloadform").hide();
      });
      $('#menuprestasi').on('click', function (e) {
         $('#prestasi').show(); 
         $('#umum').hide(); 
         $('#jalur').val('prestasi');
+        $("#downloadform").hide();
      });
 
 
@@ -721,6 +726,7 @@
             }).on('success.form.bv', function(e) {                
                 e.preventDefault();      
                 $("#response").hide();
+                $("#downloadform").hide();
                 var url = $(this).attr('action');
                 var data = $(this).serialize();
                 var base_url = '<?php echo base_url();?>';
@@ -733,6 +739,8 @@
                     if(data.ok == 0){ 
                         $("#response").show();
                         $("#response").html(data.msg);
+                        $("#downloadform").show();
+                        $("#downloadform").html(data.btn);
                         $('#response').delay(5000).fadeOut('slow');                  
                     }
                 });

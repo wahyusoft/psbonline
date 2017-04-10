@@ -50,7 +50,7 @@ class Users_model extends CI_model{
         $this->db->update($this->table, $array_data);   
     }
 
-    public function simpan_daftar(){
+    public function simpan_daftar($mypin){
         $tgl = filter_string($this->input->post("tgllahir",true));
         $data = array(
            'nama' => filter_string($this->input->post("nama",true)),
@@ -108,10 +108,10 @@ class Users_model extends CI_model{
            'userID'=>0,
            'jenis' => filter_string($this->input->post("jenis",true)),
            'jalur' => filter_string($this->input->post("jalur",true)),
-           'tglpost'=>date('Y-m-d H:i:s')
+           'tglpost'=>date('Y-m-d H:i:s'),
+           'pin'=>$mypin
         );
-
-       return $this->db->insert('pendaftaran', $data); 
+        return $this->db->insert('pendaftaran', $data); 
         
     }
 
@@ -123,6 +123,11 @@ class Users_model extends CI_model{
 
     public function pendaftarID($ID){
         $result = $this->db->get_where('pendaftaran',array('pendaftarId'=>$ID));        
+        return $result->row();
+    }
+
+    public function pendaftarPIN($ID){
+        $result = $this->db->get_where('pendaftaran',array('pin'=>$ID));        
         return $result->row();
     }
 

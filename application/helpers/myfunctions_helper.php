@@ -25,6 +25,15 @@
         $the_date = $day.'-'.$month.'-'.$year;                           
         return  $the_date;
     }
+
+    function RandomString($length) {
+        $keys = array_merge(range('A', 'Z'), range(0,9));
+        $key ='';
+        for($i=0; $i < $length; $i++) {
+            $key .= $keys[array_rand($keys)];
+        }
+        return $key;
+    }
   
 
   ?>  

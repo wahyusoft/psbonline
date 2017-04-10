@@ -26,7 +26,8 @@ class Pendaftar extends CI_Controller {
         $this->my_template->loadAdmin('pendaftar/index',$output);
 	}
 
-    public function downloadpdf($id){         
+    public function downloadpdf($id){   
+        $this->my_template->cekAuth();      
         include("./vendor/autoload.php");        
         define('DOMPDF_ENABLE_AUTOLOAD', false);
         define('DOMPDF_ENABLE_REMOTE',true);        

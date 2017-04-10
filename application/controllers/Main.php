@@ -34,8 +34,8 @@ class Main extends CI_Controller {
              echo json_encode(array('ok'=>0,  'msg'=>$res));
              exit;
          }else{ 
-
-             $return = $this->Users_model->simpan_daftar();
+             $mypin = RandomString(5);
+             $return = $this->Users_model->simpan_daftar($mypin);
              if(!$return){
                 $res = $this->my_template->loadMessage(2,"Pendaftaran gagal.");  
                 header('Content-Type: application/json');                
@@ -43,12 +43,28 @@ class Main extends CI_Controller {
                 exit;
              }else{
                $res = $this->my_template->loadMessage(1,"Pendaftaran berhasil.");  
-                header('Content-Type: application/json');                
-                echo json_encode(array('ok'=>0,  'msg'=>$res));
+                header('Content-Type: application/json');   
+                $button= '<a class="btn btn-primary" href="'.base_url().'main/downloadpdf/'.$mypin.'" role="button"><i class="fa fa-download" aria-hidden="true"></i>&nbsp; Download PDF</a>';             
+                echo json_encode(array('ok'=>0,  'msg'=>$res,'btn'=>$button));
                 exit;
              }             
-         }
-        
+         }        
+    }
+
+    public function downloadpdf($id){           
+        include("./vendor/autoload.php");        
+        define('DOMPDF_ENABLE_AUTOLOAD', false);
+        define('DOMPDF_ENABLE_REMOTE',true);        
+        require_once './vendor/dompdf/dompdf/dompdf_config.inc.php';
+        $dompdf = new DOMPDF();
+        $data['siswa']=$this->Users_model->pendaftarPIN($id);
+        $html = $this->load->view('pendaftar/cetak',$data,true);        
+        $dompdf->load_html($html);
+        $dompdf->set_paper('legal', 'potrait');
+        $dompdf->render();
+        $namax=$data['siswa']->nama;
+        $dompdf->stream("formulir-$namax.pdf");
+
     }
         
     
