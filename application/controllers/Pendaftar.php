@@ -14,11 +14,12 @@ class Pendaftar extends CI_Controller {
 
     public function index()
 	{   
-        $this->crud->columns('nama','asalsekolah','tglpost');
+        $this->crud->columns('nama','asalsekolah','tglpost','jalur');
         $this->crud->display_as('nama','Nama Lengkap')
                    ->display_as('asalsekolah','Sekolah Asal')    
-                   ->display_as('tglpost','Tgl Daftar');   
-        $this->crud->required_fields('nis','nama','tmplahir','tgllahir','dusun','namaayah','asalsekolah');                   
+                   ->display_as('tglpost','Tgl Daftar')
+                   ->display_as('jalur','Jalur');   
+        $this->crud->required_fields('nis','nama','tmplahir','tgllahir','dusun','namaayah','asalsekolah','jalur','pin');                   
         $this->crud->set_subject($this->module);                            
         $this->crud->set_table($this->module);          
         $output = $this->crud->render();                
