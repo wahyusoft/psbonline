@@ -45,9 +45,13 @@
         </div>
         <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav navbar-right">
-        <li class="scroll active"><a href="#home">Home</a></li>
-        <li class="scroll"><a href="#explore" id="menuumum">Pendaftaran Jalur Umum</a></li>
-        <li class="scroll"><a href="#explore" id="menuprestasi">Pendaftaran Jalur Prestasi</a></li>
+        <li class="scroll active"><a href="#home">Home</a></li>     
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Jalur Pendaftaran <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li class="scroll"><a href="#explore" id="menuumum">Jalur Umum</a></li>
+            <li class="scroll"><a href="#explore" id="menuprestasi">Jalur Prestasi</a></li>
+          </ul>
+         </li>
         <li class="scroll"><a href="#event">Peringkat Sementara</a></li>
         <li class="no-scroll"><a href="#twitter">Brosur</a></li>
 
@@ -92,21 +96,20 @@
 </section>
 
 
-<section id="explore" class="content" >    
-
+<section id="explore" class="content" style="width: 800px;">    
 <form method="post" id="frmregister" name="frmregister" action="<?php echo base_url().'main/register';?>" >
       <input type="hidden" name="jalur" id="jalur" value="umum">
       <h2 id="umum" class="heading">Pendaftaran Jalur Umum</h2>       
       <h2 id="prestasi" class="heading">Pendaftaran Jalur Prestasi</h2>       
        <!-- SELECT2 EXAMPLE -->
-      <div class="box box-default">
+      <div class="box box-default" >
         <div class="box-header with-border">
           <h3 class="box-title">A. Data Calon Peserta Didik</h3>
         </div>
         <!-- /.box-header -->
         <div class="box-body">
           <div class="row" style="padding: 10px;">
-            <div class="col-md-6">
+            <div class="col-md-12">
               <div class="form-group">
                 <label>Nama</label>
                <input type="text" name="nama" id="nama" class="form-control" placeholder="Isi nama sesuai ijazah SMP/MTS" >
@@ -237,7 +240,7 @@
             </div>
             
             <!-- /.col -->
-            <div class="col-md-6">
+            <div class="col-md-12">
               
              
             </div>
@@ -251,7 +254,7 @@
         <!-- /.box-header -->
         <div class="box-body">
           <div class="row" style="padding: 10px;">
-            <div class="col-md-6">
+            <div class="col-md-12">
               <div class="row">
                 <div class="col-xs-6">
                     <label>Nama Ayah</label>
@@ -441,7 +444,7 @@
 
             </div>
 
-            <div class="col-md-6">
+            <div class="col-md-12">
                              
             </div>
 
@@ -455,7 +458,7 @@
         <!-- /.box-header -->
         <div class="box-body">
           <div class="row" style="padding: 10px;">
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <div class="form-group">
                   <label>Asal Sekolah / Madrasah</label>
                   <input type="text" name="asalsekolah" id="asalsekolah" class="form-control" placeholder="Isi Asal Sekolah / Madrasah" required="required">
@@ -547,7 +550,7 @@
                 </div>
 
             </div>
-            <div class="col-md-6">
+            <div class="col-md-12">
             </div>
           </div>
         </div>    
@@ -560,11 +563,14 @@
            </div> 
            <div class="col-xs-2">
              <div id="downloadform"></div>
-           </div> 
+           </div>            
+        </div>
+        <div class="form-group">
+           <p id="notes" style="padding: 10px;">Silahkan klik Download PDF untuk mendownload data pendaftaran Anda, silahkan diprint pada kertas ukuran A4 lalu dibawa ke MA Sunniyyah Selo untuk diserahkan ke Panitia PPDB sekaligus untuk membayar biaya pendaftaran. Sertakan juga pas foto ukuran 3 x 4 sebanyak 4 lembar dan berkas-berkas lainnya, terima kasih.</p>
         </div>
         <div id="response"></div>
       </div>
-   </form>   
+   </form>    
 </section> 
 
 
@@ -647,17 +653,20 @@
   $(document).ready(function() {
     //Date picker
      $('#prestasi').hide(); 
+     $("#notes").hide();
      $('#menuumum').on('click', function (e) {
         $('#prestasi').hide(); 
         $('#umum').show(); 
         $('#jalur').val('umum');
         $("#downloadform").hide();
+        $("#notes").hide();
      });
      $('#menuprestasi').on('click', function (e) {
         $('#prestasi').show(); 
         $('#umum').hide(); 
         $('#jalur').val('prestasi');
         $("#downloadform").hide();
+        $("#notes").hide();
      });
 
 
@@ -740,6 +749,7 @@
                         $("#response").show();
                         $("#response").html(data.msg);
                         $("#downloadform").show();
+                        $("#notes").show();
                         $("#downloadform").html(data.btn);
                         $('#response').delay(5000).fadeOut('slow');                  
                     }
