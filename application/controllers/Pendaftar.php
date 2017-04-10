@@ -18,8 +18,7 @@ class Pendaftar extends CI_Controller {
         $this->crud->display_as('nama','Nama Lengkap')
                    ->display_as('asalsekolah','Sekolah Asal')    
                    ->display_as('tglpost','Tgl Daftar');   
-        $this->crud->required_fields('nis','nama','tmplahir','tgllahir','dusun','namaayah','asalsekolah');   
-        $this->crud->fields('programs','terms','weeks','hours');            
+        $this->crud->required_fields('nis','nama','tmplahir','tgllahir','dusun','namaayah','asalsekolah');                   
         $this->crud->set_subject($this->module);                            
         $this->crud->set_table($this->module);          
         $output = $this->crud->render();                
