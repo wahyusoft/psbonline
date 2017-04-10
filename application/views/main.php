@@ -121,13 +121,13 @@
                 <label>Jenis Kelamin</label>
                   <div class="radio">
                     <label>
-                      <input type="radio" name="jk" id="jk" value="L" checked="checked">
+                      <input type="radio" name="jk" id="jk" value="Laki-laki" checked="checked">
                       Laki - laki
                     </label>
                   </div>
                   <div class="radio">
                     <label>
-                      <input type="radio" name="jk" id="jk" value="P">
+                      <input type="radio" name="jk" id="jk" value="Perempuan">
                       Perempuan
                     </label>
                   </div>

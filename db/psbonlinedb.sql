@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 10, 2017 at 12:02 PM
+-- Generation Time: Apr 10, 2017 at 12:26 PM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 7.0.13
 
@@ -106,8 +106,8 @@ CREATE TABLE `pendaftaran` (
 --
 
 INSERT INTO `pendaftaran` (`pendaftarId`, `nama`, `nis`, `jk`, `tmplahir`, `tgllahir`, `agama`, `anakke`, `jumsdrkandung`, `jumsdrtiri`, `hobi`, `dusun`, `rt`, `rw`, `desa`, `kecamatan`, `kodepos`, `namaayah`, `namaibu`, `pekerjaanayah`, `pekerjaanibu`, `agamaayah`, `agamaibu`, `pendidikanayah`, `pendidikanibu`, `penghasilanayah`, `penghasilanibu`, `dusunortu`, `rtortu`, `rwortu`, `desaortu`, `kecamatanortu`, `namawali`, `kerjawali`, `agamawali`, `dusunwali`, `rtwali`, `rwwali`, `desawali`, `kecamatanwali`, `asalsekolah`, `alamatsekolah`, `prestasi17`, `prestasi27`, `prestasi18`, `prestasi28`, `prestasi19`, `prestasi29`, `thnmasuk`, `thnlulus`, `kejuaraantingkat`, `juarake`, `jenis`, `userID`, `ka1`, `ka2`, `ka3`, `ka4`, `nonka1`, `nonka2`, `nonka3`, `nonka4`, `ijazah`, `skhun`, `kk`, `kps`, `kip`, `pkh`, `tglpost`, `jalur`, `skor`, `pin`) VALUES
-(1, 'Kamini', '123224112', 'P', 'Blora', '1983-06-04', 'Islam', 2, 4, 1, 'Makan dan jadi presiden', 'Pereng Wetan', '60', '2', 'Argorejo', 'Sedayu', '55123', 'Darno', 'Sumiyatun', 'Koding', 'PRT', 'Islam', 'Islam', 'S1', 'D3', '3000000-5000000', '500000-1000000', 'Pereng Wetan', '60', '01', 'Argorejo', 'Sedayu', '', '', 'Islam', '', '', '', '', '', 'MI Iptidaiyah', 'Jl Wates KM 07', 'Juara tinju', '', '', '', '', '', 2013, 2015, 'Nasional', '1', 'Pertarungan', 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2017-04-10 11:44:31', 'umum', 0, 'YFNLM'),
-(2, 'Faris Grita', '11122321', 'L', 'Lubuk Lingau', '1988-07-21', 'Islam', 1, 1, 1, 'Mancing', 'Dabo', '12', '2', 'Maja', 'Sela', '11121', 'Dedy', 'Dona', 'Dosen', 'Dagang', 'Islam', 'Islam', 'S3', 'S1', '>5000000', '2000000-3000000', '', '', '', '', '', '', '', 'Islam', '', '', '', '', '', 'Tsanawiyah', 'Jl. Bandung No 99', '', '', '', '', '', '', 2012, 2015, '', '', '', 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2017-04-10 11:57:46', 'prestasi', 0, 'AR46I');
+(1, 'Kamini', '123224112', 'Perempuan', 'Blora', '1983-06-04', 'Islam', 2, 4, 1, 'Makan dan jadi presiden', 'Pereng Wetan', '60', '2', 'Argorejo', 'Sedayu', '55123', 'Darno', 'Sumiyatun', 'Koding', 'PRT', 'Islam', 'Islam', 'S1', 'D3', '3000000-5000000', '500000-1000000', 'Pereng Wetan', '60', '01', 'Argorejo', 'Sedayu', '', '', 'Islam', '', '', '', '', '', 'MI Iptidaiyah', 'Jl Wates KM 07', 'Juara tinju', '', '', '', '', '', 2013, 2015, 'Nasional', '1', 'Pertarungan', 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2017-04-10 11:44:31', 'umum', 0, 'YFNLM'),
+(2, 'Faris Grita', '11122321', 'Laki-laki', 'Lubuk Lingau', '1988-07-21', 'Islam', 1, 1, 1, 'Mancing', 'Dabo', '12', '2', 'Maja', 'Sela', '11121', 'Dedy', 'Dona', 'Dosen', 'Dagang', 'Islam', 'Islam', 'S3', 'S1', '>5000000', '2000000-3000000', '', '', '', '', '', '', '', 'Islam', '', '', '', '', '', 'Tsanawiyah', 'Jl. Bandung No 99', '', '', '', '', '', '', 2012, 2015, '', '', '', 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2017-04-10 11:57:46', 'prestasi', 0, 'AR46I');
 
 -- --------------------------------------------------------
 
@@ -132,7 +132,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`userID`, `FirstName`, `LastName`, `userName`, `userPassword`, `userAccess`, `islogin`, `alvatar`, `lastlogin`) VALUES
-(1, 'Muhammmad', 'Said', 'admin', 'admin', 'admin', 0, 'b02a2-user2-160x160.png', '2017-04-10 11:05:40');
+(1, 'Muhammmad', 'Said', 'admin', 'admin', 'admin', 1, 'b02a2-user2-160x160.png', '2017-04-10 12:04:49');
 
 --
 -- Indexes for dumped tables
