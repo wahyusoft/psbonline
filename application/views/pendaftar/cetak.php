@@ -1,9 +1,11 @@
 <?php
   $check="<img src='".base_url().'assets/images/box.jpg'."' >";
+  $jns = $siswa->jalur;
+  $hdimg = ($jns=="umum")? "header2.jpg" : "header1.jpg";
 ?>
 <table width="100%" style="
         font-size: 11pt;">
-  <tr><td colspan="5"><img width="500px" src="<?php echo base_url().'assets/images/header1.jpg';?>"></td></tr>
+  <tr><td colspan="5"><img width="500px" src="<?php echo base_url().'assets/images/'.$hdimg;?>"></td></tr>
   <tr><td colspan="5"><b>Harap diisi daftar isian berikut dengan benar !</b></td></tr>
   <tr><td colspan="5">A. DATA CALON PESERTA DIDIK</td></tr>
   <tr><td colspan="2" width="30%">&nbsp;&nbsp;1. Nama</td><td width="70%" colspan="3">: <?php echo $siswa->nama;?></td></tr>
@@ -41,11 +43,16 @@
   <tr><td colspan="2"></td>
                           <td colspan="3">&nbsp;&nbsp;Peringkat pada Semester 1 : <?php echo $siswa->prestasi19;?>   &nbsp; Semester 2 : <?php echo $siswa->prestasi29;?>  di Kelas 9</td></tr>  
   <tr><td colspan="2">&nbsp;&nbsp;4. Masuk SMP/MTs Tahun</td><td colspan="3">: <?php echo $siswa->thnmasuk;?> &nbsp; Lulus Tahun : <?php echo $siswa->thnlulus;?></td></tr>   
-   <tr><td colspan="2">&nbsp;&nbsp;5. Prestasi Kejuaraan</td><td colspan="3">: Tingkat <?php echo $siswa->kejuaraantingkat;?> &nbsp; Juara ke : <?php echo $siswa->juarake;?> &nbsp; Jenis <?php echo $siswa->jenis;?></td></tr>     
+   <tr><td colspan="2">&nbsp;&nbsp;5. Prestasi Kejuaraan</td><td colspan="3">: Tingkat <?php echo $siswa->kejuaraantingkat;?> &nbsp; Juara ke : <?php echo $siswa->juarake;?> &nbsp; Jenis <?php echo $siswa->jenis;?></td></tr>   
+  <?php if($jns=="prestasi"){?>   
   <tr><td colspan="5">&nbsp;&nbsp;6. Jenis prestasi ( diisi petugas pendaftaran)</td></tr>  
    <tr><td colspan="2"></td><td colspan="3"> &nbsp;: Akademik Kategori : 1. <?php echo $check;?> &nbsp; 2. <?php echo $check;?> &nbsp; 3. <?php echo $check;?> &nbsp; 4. <?php echo $check;?> &nbsp;</td></tr>
   <tr><td colspan="2">
-                          <td colspan="3">&nbsp;: Non Akademik &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 1. <?php echo $check;?> &nbsp; 2. <?php echo $check;?> &nbsp; 3. <?php echo $check;?> &nbsp; 4. <?php echo $check;?> &nbsp;</td></tr>                                            
+                          <td colspan="3">&nbsp;: Non Akademik &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 1. <?php echo $check;?> &nbsp; 2. <?php echo $check;?> &nbsp; 3. <?php echo $check;?> &nbsp; 4. <?php echo $check;?> &nbsp;</td></tr>
+  <?php }else{
+      echo '<tr><td colspan="5"><br><br></td></tr>';
+    } 
+  ?>                                            
    
    <tr><td colspan="5" align="left">Mengetahui,</td> </tr>                     
    <tr><td colspan="5">
