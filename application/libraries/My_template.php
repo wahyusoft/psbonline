@@ -29,9 +29,8 @@ class My_template {
 	
 	public function MenuAdmin(){		
 		$nav = '<ul class="sidebar-menu">
-				 <li class="header">Menu</li>';
-        $level = $this->ci->session->userdata("userAccess");
-        $array_menu = array(""=>"Dashboard",
+				 <li class="header">Menu</li>';        
+        $array_menu = array("home"=>"Dashboard",
                             "pendaftar"=>"Pendaftar Masuk",
                             "users"=>"Pengguna Sistem");
         $icons = array('dashboard','users','users');			

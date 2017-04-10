@@ -48,7 +48,9 @@
    <table width="100%">
     <tr><td align="left">Kepala Sekolah/Madrasah</td><td align="center">Petugas Pendaftaran</td><td align="center">Pendaftar</td></tr> 
     <tr><td colspan="3"><br><br><br><br></td></tr> 
-     <tr><td align="left">(....................)</td><td align="center">(....................)</td><td align="center">(....................)</td></tr> 
+     <tr><td align="left"><u>Moh. Nur Cholis, S.Pd</u><br/>NIP. 19600205200604104
+
+     </td><td align="center">(....................)</td><td align="center">(....................)</td></tr> 
   </table>
     </td></tr> 
   <tr><td colspan="5"><br><br></td></tr>            
@@ -60,6 +62,7 @@
                           <td width="1px"></td><td>Kartu KIP ( Jika Mempunyai )</td></tr>
 <tr><td></td><td></td><td align="right"></td>
                           <td width="1px"></td><td>Kartu PKH ( Jika Mempunyai )</td></tr>
+<tr><td colspan="5"><small><i>Dicetak pada tanggal/waktu <?php echo date('d-m-Y / H:i:s');?></i></small></td>                          
 
 </table>
 
