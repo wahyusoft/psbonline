@@ -46,12 +46,12 @@
    <tr><td colspan="2"></td><td colspan="3"> &nbsp;: Akademik Kategori : 1. <?php echo $check;?> &nbsp; 2. <?php echo $check;?> &nbsp; 3. <?php echo $check;?> &nbsp; 4. <?php echo $check;?> &nbsp;</td></tr>
   <tr><td colspan="2">
                           <td colspan="3">&nbsp;: Non Akademik &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 1. <?php echo $check;?> &nbsp; 2. <?php echo $check;?> &nbsp; 3. <?php echo $check;?> &nbsp; 4. <?php echo $check;?> &nbsp;</td></tr>                                            
-   <tr><td colspan="5" align="right">Selo, <?php echo date('d-m-Y');?></td></tr>  
+   
    <tr><td colspan="5" align="left">Mengetahui,</td> </tr>                     
    <tr><td colspan="5">
    <table width="100%">
-    <tr><td align="left">Kepala Sekolah/Madrasah</td><td align="center">Petugas Pendaftaran</td><td align="center">Pendaftar</td></tr> 
-    <tr><td colspan="3"><br><br></td></tr> 
+    <tr><td align="left">Kepala Sekolah/Madrasah</td><td align="center">Petugas Pendaftaran</td><td align="center">Selo, <?php echo date('d-m-Y');?><br>Pendaftar</td></tr> 
+    <tr><td colspan="3"><br><br><br></td></tr> 
      <tr><td align="left"><u>Moh. Nur Cholis, S.Pd</u><br/>NIP. 19600205200604104
 
      </td><td align="center">( <?php echo $this->session->userdata('FullName');?> )</td><td align="center">( <?php echo $siswa->nama;?> )</td></tr> 
@@ -63,7 +63,7 @@
   <tr><td colspan="2"></td><td  colspan="3"><?php echo $check;?> Kartu KPS ( Jika Mempunyai )</td></tr>  
   <tr><td colspan="2"></td><td colspan="3"><?php echo $check;?> Kartu KIP ( Jika Mempunyai )</td></tr>
 <tr><td colspan="2"><td colspan="3"><?php echo $check;?> Kartu PKH ( Jika Mempunyai )</td></tr>
-<tr><td colspan="5"><br><small><i>Dicetak pada tanggal/waktu <?php echo date('d-m-Y / H:i:s');?></i></small></td>                          
+<tr><td colspan="5"><small><i>Dicetak pada tanggal/waktu <?php echo date('d-m-Y / H:i:s');?></i></small></td>                          
 </table>
 
 
