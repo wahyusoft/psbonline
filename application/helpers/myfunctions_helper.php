@@ -13,9 +13,16 @@
     }
 
     function format_convert($date){
+        $list = explode('/', $date);                 
+        $year   = @$list[0];  $month= @$list[1];  $day= @$list[2];
+        $the_date = $year.'-'.$month.'-'.$day;                           
+        return  $the_date;
+    }
+
+    function tglIndo($date){
         $list = explode('-', $date);                 
         $year   = @$list[0];  $month= @$list[1];  $day= @$list[2];
-        $the_date = $month.'/'.$day.'/'.$year;                           
+        $the_date = $day.'-'.$month.'-'.$year;                           
         return  $the_date;
     }
   
