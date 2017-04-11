@@ -267,9 +267,9 @@
     
   <link rel="stylesheet" href="<?php echo base_url().'assets/plugins/datepicker/datepicker3.css';?>">
   <script src="<?php echo base_url().'assets/plugins/datepicker/bootstrap-datepicker.js';?>"></script>
-  <link rel="stylesheet" href="<?php echo base_url().'assets/plugins/timepicker/bootstrap-timepicker.min.css';?>">
+
   <script src="<?php echo base_url().'assets/plugins/timepicker/bootstrap-timepicker.min.js';?>"></script>
-<script src="<?php echo base_url();?>assets/js/form-wizards-demo.js"></script> 
+
     <!-- AdminLTE App -->
    
 </body>
