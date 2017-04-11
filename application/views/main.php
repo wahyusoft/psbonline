@@ -658,6 +658,7 @@ Silahkan Isi Formulir Berikut ini, Pilih Jalur Pendaftaran Yang Anda Kehendaki (
 <script type="text/javascript">  
   $(document).ready(function() {
     //Date picker
+
      $('#prestasi').hide(); 
      $("#notes").hide();
      $('#menuumum').on('click', function (e) {
