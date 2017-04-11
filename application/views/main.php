@@ -92,7 +92,7 @@
 </section>
 
 
-<section id="explore" class="content" style="width: 800px;">  
+<section id="explore" class="content" style="width: 70%;">  
 <div class="form-group" style="margin-top: 20px;">
 Silahkan Isi Formulir Berikut ini, Pilih Jalur Pendaftaran Yang Anda Kehendaki (Pendaftaran Jalur Umum atau Pendaftaran Jalur Prestasi)
 </div>  
@@ -558,7 +558,7 @@ Silahkan Isi Formulir Berikut ini, Pilih Jalur Pendaftaran Yang Anda Kehendaki (
         <!-- /.box-body -->
         <div class="box-footer">
            <div class="col-xs-2">
-              <input type="submit" name="btnSubmit" class="btn btn-block btn-primary btn-lg" value="Daftar">               
+              <input type="submit" name="btnSubmit" class="btn btn-primary btn-lg" value="Daftar">               
            </div> 
            <div class="col-xs-2">
              <div id="downloadform"></div>
