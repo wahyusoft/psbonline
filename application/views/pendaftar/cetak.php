@@ -5,9 +5,12 @@
 ?>
 <table width="100%" style="
         font-size: 11pt;">
-  <tr><td colspan="5"><img width="500px" src="<?php echo base_url().'assets/images/'.$hdimg;?>"></td></tr>
-  <tr><td colspan="5"><b>Harap diisi daftar isian berikut dengan benar !</b></td></tr>
-  <tr><td colspan="5">A. DATA CALON PESERTA DIDIK</td></tr>
+  <tr><td colspan="4" valign="top"><img width="550px" src="<?php echo base_url().'assets/images/'.$hdimg;?>">
+  <br/> <b>Harap diisi daftar isian berikut dengan benar !</b>
+  <br/>A. DATA CALON PESERTA DIDIK
+  </td><td valign="top"><img width="110px" src="<?php echo base_url().'assets/images/foto.jpg';?>"></td></tr>
+  
+  
   <tr><td colspan="2" width="30%">&nbsp;&nbsp;1. Nama</td><td width="70%" colspan="3">: <?php echo $siswa->nama;?></td></tr>
   
   <tr><td colspan="2" width="30%">&nbsp;&nbsp;2. NIS/NISN</td><td width="70%" colspan="3">: <?php echo $siswa->nis;?></td></tr>
