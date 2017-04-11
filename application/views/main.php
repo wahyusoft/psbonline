@@ -24,12 +24,8 @@
   <div class="main-nav">
     <div class="container">
         <div class="header-top">
-          <div class="pull-right social-icons">
-            <a href="#"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-google-plus"></i></a>
-            <a href="#"><i class="fa fa-youtube"></i></a>
-          </div>
+        <p align="center" style="background-color: #000000;color:#ffffff;">
+        Selamat Datang di Portal Aplikasi Pendaftaran Peserta Didik Baru MA Sunniyyah Selo, Pilih Menu "Pendaftaran" Untuk Mendaftar PPDB MA Sunniyyah Selo Secara Online Sekarang Juga. PPDB Online ini Akan Kami Tutup Pada Tanggal 20 Juli 2017.  </p>      
         </div>
       <div class="row">
         <div class="navbar-header">
@@ -46,14 +42,14 @@
         <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav navbar-right">
         <li class="scroll active"><a href="#home">Home</a></li>     
-        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Jalur Pendaftaran <span class="caret"></span></a>
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Pendaftaran <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li class="scroll"><a href="#explore" id="menuumum">Jalur Umum</a></li>
             <li class="scroll"><a href="#explore" id="menuprestasi">Jalur Prestasi</a></li>
           </ul>
          </li>
         <li class="scroll"><a href="#event">Peringkat Sementara</a></li>
-        <li class="no-scroll"><a href="#twitter">Brosur</a></li>
+        <li class="no-scroll"><a href="#twitter">Download Brosur</a></li>
 
         </ul>
         </div>
@@ -96,7 +92,10 @@
 </section>
 
 
-<section id="explore" class="content" style="width: 800px;">    
+<section id="explore" class="content" style="width: 800px;">  
+<div class="form-group" style="margin-top: 20px;">
+Silahkan Isi Formulir Berikut ini, Pilih Jalur Pendaftaran Yang Anda Kehendaki (Pendaftaran Jalur Umum atau Pendaftaran Jalur Prestasi)
+</div>  
 <form method="post" id="frmregister" name="frmregister" action="<?php echo base_url().'main/register';?>" >
       <input type="hidden" name="jalur" id="jalur" value="umum">
       <h2 id="umum" class="heading">Pendaftaran Jalur Umum</h2>       
@@ -576,8 +575,12 @@
 
 
 <section id="event">
+
   <div class="container">
-    <div class="row" style="padding: 30px;">     
+    <div class="row" style="padding: 30px;">    
+          <div class="form-group" style="margin-top: 30px;color: #ffffff;">
+          Berikut ini adalah Data Calon Peserta Didik Baru Yang Sudag Mendaftar Secara Online Di Portal Aplikasi PPDB Online MA Sunniyyah Selo ini.
+          </div>  
         <div class="box">
             <div class="box-header">
               <h3 class="box-title">Peringkat Sementara</h3>
@@ -620,6 +623,9 @@
 
 <section id="twitter">
   <div class="container">
+    <div class="form-group" style="margin-top: 10px;">
+          Silahkan Download /simpan browser berikut ini pada device/HP Anda, jika Anda menggunakan browser desktop/komputer PC klik kanan pada area gambar lalu pilih menu "Save Image As". Atau jika Anda menggunakan browser pada Handphone Anda, silahkan pada area gambar tab & tahan beberapa saat sampai muncul menu "Download image" dan simpan device/HP Anda. Terima kasih.
+          </div> 
     <div class="text-center">
       <img class="img-responsive" src="<?php echo base_url().'assets/';?>images/Brosur-PPDB-MASS-2017.jpg" alt="">
     </div>

@@ -36,6 +36,6 @@ define('FOPEN_READ_WRITE_CREATE',				'a+b');
 define('FOPEN_WRITE_CREATE_STRICT',				'xb');
 define('FOPEN_READ_WRITE_CREATE_STRICT',		'x+b');
 define('AUTHOR','Wahyu Widodo');
-define('APPNAME','Online Document Management System for IALAP');
+define('APPNAME','PPBD MA Sunniyyah Selo');
 /* End of file constants.php */
 /* Location: ./application/config/constants.php */
