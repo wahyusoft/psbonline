@@ -92,7 +92,7 @@
 </section>
 
 
-<section id="explore" class="content" style="width: 70%;">  
+<section id="explore" class="content" style="width: 70%;"> 
 <div class="form-group" style="margin-top: 20px;">
 Silahkan Isi Formulir Berikut ini, Pilih Jalur Pendaftaran Yang Anda Kehendaki (Pendaftaran Jalur Umum atau Pendaftaran Jalur Prestasi)
 </div>  
@@ -115,8 +115,8 @@ Silahkan Isi Formulir Berikut ini, Pilih Jalur Pendaftaran Yang Anda Kehendaki (
               </div>
               
               <div class="form-group">
-                <label>NIS/NISN</label>
-                <input type="text" name="nis" id="nis" class="form-control" placeholder="Isi NIS" >
+                <label>NISN</label>
+                <input type="text" name="nis" id="nis" class="form-control" placeholder="Isi NISN" >
               </div>
               
               <div class="form-group">
@@ -146,7 +146,9 @@ Silahkan Isi Formulir Berikut ini, Pilih Jalur Pendaftaran Yang Anda Kehendaki (
                     <div class="input-group-addon">
                       <i class="fa fa-calendar"></i>
                     </div>
+                    
                     <input type="text" class="form-control pull-right" id="tgllahir" name="tgllahir" required="required">
+                    
                   </div>  
                 </div>
               </div>  
@@ -179,7 +181,7 @@ Silahkan Isi Formulir Berikut ini, Pilih Jalur Pendaftaran Yang Anda Kehendaki (
                 <div class="col-xs-6">
                   <label>Jumlah Saudara Kandung</label>
                    <select class="form-control" id="jumsdrkandung" name="jumsdrkandung">
-                    <?php for($a=1;$a<=20;$a++){
+                    <?php for($a=0;$a<=20;$a++){
                         echo "<option value='$a'>$a</option>";
                       }     
                     ?> 
@@ -333,23 +335,23 @@ Silahkan Isi Formulir Berikut ini, Pilih Jalur Pendaftaran Yang Anda Kehendaki (
                 <div class="col-xs-6">
                     <label>Rata-rata Penghasilan Ayah</label>
                     <select class="form-control" id="penghasilanayah" name="penghasilanayah">
-                        <option value="<500000"><500.000</option>
-                        <option value="500000-1000000">500.000-1.000.000</option>
-                        <option value="1000000-2000000">1.000000-2.000000</option>
-                        <option value="2000000-3000000">2.000000-3.000000</option>
-                        <option value="3000000-5000000">3.000000-5.000000</option>
-                        <option value=">5000000">>5.000.000</option>
+                        <option value="<500.000"><500.000</option>
+                        <option value="500.000-1.000.000">500.000-1.000.000</option>
+                        <option value="1.000.000-2.000.000">1.000000-2.000000</option>
+                        <option value="2.000.000-3.000.000">2.000000-3.000000</option>
+                        <option value="3.000.000-5.000.000">3.000000-5.000000</option>
+                        <option value=">5.000.000">>5.000.000</option>
                     </select>
                 </div>
                 <div class="col-xs-6">
                     <label>Rata-rata Penghasilan Ibu</label>
                      <select class="form-control" id="penghasilanibu" name="penghasilanibu">
-                        <option value="<500000"><500.000</option>
-                        <option value="500000-1000000">500.000-1.000.000</option>
-                        <option value="1000000-2000000">1.000000-2.000000</option>
-                        <option value="2000000-3000000">2.000000-3.000000</option>
-                        <option value="3000000-5000000">3.000000-5.000000</option>
-                        <option value=">5000000">>5.000.000</option>
+                        <option value="<500.000"><500.000</option>
+                        <option value="500.000-1.000.000">500.000-1.000.000</option>
+                        <option value="1.000.000-2.000.000">1.000000-2.000000</option>
+                        <option value="2.000.000-3.000.000">2.000000-3.000000</option>
+                        <option value="3.000.000-5.000.000">3.000000-5.000000</option>
+                        <option value=">5.000.000">>5.000.000</option>
                     </select>  
                 </div>    
               </div>

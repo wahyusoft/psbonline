@@ -31,17 +31,8 @@ class Login extends CI_Controller {
              }else{
                 //check users
                 $sesID = $this->session->userdata('userID');
-                $data =  $this->Users_model->get_data_byId($sesID);
-                if ($data->userPassword == 'qwerty') {
-                    $url_location1 = 'users';
-                    $url_location2 = 'profile';
-                } else {    
-                    $url_location1 = 'home'; 
-                    $url_location2 = '';
-                }    
-                echo json_encode(array( 'ok'=>1,  
-                                        'urlpath1'=> strval($url_location1),
-                                        'urlpath2'=> strval($url_location2)));
+                $data =  $this->Users_model->get_data_byId($sesID);                
+                echo json_encode(array( 'ok'=>1, 'urlpath'=> 'home'));
                 exit;
              }             
          }

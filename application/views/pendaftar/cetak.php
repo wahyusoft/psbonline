@@ -13,7 +13,7 @@
   
   <tr><td colspan="2" width="30%">&nbsp;&nbsp;1. Nama</td><td width="70%" colspan="3">: <?php echo $siswa->nama;?></td></tr>
   
-  <tr><td colspan="2" width="30%">&nbsp;&nbsp;2. NIS/NISN</td><td width="70%" colspan="3">: <?php echo $siswa->nis;?></td></tr>
+  <tr><td colspan="2" width="30%">&nbsp;&nbsp;2. NISN</td><td width="70%" colspan="3">: <?php echo $siswa->nis;?></td></tr>
   <tr><td colspan="2">&nbsp;&nbsp;3. Jenis Kelamin</td><td colspan="3">: <?php echo $siswa->jk;?></td></tr>
   <tr><td colspan="2">&nbsp;&nbsp;4. Tempat & Tgl Lahir</td><td colspan="3">: <?php echo $siswa->tmplahir.', '.tglIndo($siswa->tgllahir);?> </td></tr>
   <tr><td colspan="2">&nbsp;&nbsp;5. Agama</td><td colspan="3">: <?php echo $siswa->agama;?></td></tr>
@@ -34,7 +34,7 @@
   <tr><td colspan="2">&nbsp;&nbsp;7. Nama Wali</td><td colspan="3">: <?php echo $siswa->namawali;?></td></tr>
   <tr><td colspan="2">&nbsp;&nbsp;8. Pekerjaan</td><td colspan="3">: <?php echo $siswa->kerjawali;?></td></tr>
   <tr><td colspan="2">&nbsp;&nbsp;9. Agama</td><td colspan="3">: <?php echo $siswa->kerjawali;?></td></tr>
-  <tr><td colspan="2">&nbsp;&nbsp;10. Alamat</td><td colspan="3">: Dsn : <?php echo $siswa->dusunwali;?> &nbsp; RT : rtwali &nbsp; RW : <?php echo $siswa->rwwali;?> &nbsp;</td></tr> 
+  <tr><td colspan="2">&nbsp;&nbsp;10. Alamat</td><td colspan="3">: Dsn : <?php echo $siswa->dusunwali;?> &nbsp; RT : <?php echo $siswa->rtwali;?> &nbsp; RW : <?php echo $siswa->rwwali;?> &nbsp;</td></tr> 
   <tr><td colspan="2"></td><td colspan="3">&nbsp;&nbsp;Desa/Kel. : <?php echo $siswa->desawali;?> &nbsp; Kec. : <?php echo $siswa->kecamatanwali;?> &nbsp; </td></tr>
   <tr><td colspan="5">C. PENDIDIKAN TERAKHIR PESERTA DIDIK</td></tr>
   <tr><td colspan="2">&nbsp;&nbsp;1. Asal Sekolah / Madrasah</td><td colspan="3">: <?php echo $siswa->asalsekolah;?></td></tr>
@@ -62,9 +62,9 @@
    <table width="100%">
     <tr><td align="left">Kepala Sekolah/Madrasah</td><td align="center">Petugas Pendaftaran</td><td align="center">Selo, <?php echo date('d-m-Y');?><br>Pendaftar</td></tr> 
     <tr><td colspan="3"><br><br><br></td></tr> 
-     <tr><td align="left"><u>Moh. Nur Cholis, S.Pd</u><br/>NIP. 19600205200604104
+     <tr><td align="left">( ................................ )
 
-     </td><td align="center">( <?php echo $this->session->userdata('FullName');?> )</td><td align="center">( <?php echo $siswa->nama;?> )</td></tr> 
+     </td><td align="center">( ................................ )</td><td align="center">( <?php echo $siswa->nama;?> )</td></tr> 
   </table>
     </td></tr> 
   <tr><td colspan="5"><br><br></td></tr>            

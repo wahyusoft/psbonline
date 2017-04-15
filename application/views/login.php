@@ -69,7 +69,6 @@
 <!-- Bootstrap 3.3.6 -->
 <script src="<?php echo base_url().'assets/bootstrap/js/bootstrap.min.js';?>"></script>
 <!-- iCheck -->
-<script src="<?php echo base_url().'assets/plugins/iCheck/icheck.min.js';?>"></script>
  <link href="<?php echo site_url('assets/plugins/bootstrapValidator/bootstrapValidator.min.css');?>" rel="stylesheet" />
 <script src="<?php echo base_url().'assets/plugins/bootstrapValidator/formValidation.min.js';?>"></script>    
 <script src="<?php echo base_url().'assets/plugins/bootstrapValidator/bootstrap.min.js';?>"></script>
@@ -77,11 +76,7 @@
 
 <script type="text/javascript">
   $(document).ready(function() {
-    $('input').iCheck({
-      checkboxClass: 'icheckbox_square-blue',
-      radioClass: 'iradio_square-blue',
-      increaseArea: '20%' // optional
-    });
+   
 
     $('#loginfrm').bootstrapValidator({    
         fields: {
@@ -117,7 +112,7 @@
                         $("#response").html(data.msg);
                         $('#response').delay(5000).fadeOut('slow');                  
                     }else{                                                                                
-                        window.location.href = base_url + data.urlpath1 + '/' + data.urlpath2;
+                        window.location.href = base_url + data.urlpath;
                     }
                 });
             });

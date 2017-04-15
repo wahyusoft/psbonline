@@ -50,14 +50,13 @@ class Users_model extends CI_model{
         $this->db->update($this->table, $array_data);   
     }
 
-    public function simpan_daftar($mypin){
-        $tgl = filter_string($this->input->post("tgllahir",true));
+    public function simpan_daftar($mypin){        
         $data = array(
            'nama' => filter_string($this->input->post("nama",true)),
            'nis' => filter_string($this->input->post("nis",true)),
            'jk' => filter_string($this->input->post("jk",true)),
            'tmplahir' => filter_string($this->input->post("tmplahir",true)),
-           'tgllahir' => convert_format($tgl),
+           'tgllahir' => convert_format($this->input->post("tgllahir",true)),
            'agama' => filter_string($this->input->post("agama",true)),
            'anakke' => filter_string($this->input->post("anakke",true)),
            'jumsdrkandung' => filter_string($this->input->post("jumsdrkandung",true)),
